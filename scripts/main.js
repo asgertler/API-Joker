@@ -1,14 +1,15 @@
 import { getJoke, useJoke } from './JokeProvider.js'
+import { Joke } from './Joke.js'
 
-var joke = []
-
-const jokeBtn = document.querySelector(".request-joke-btn");
+const jokeBtn = document.querySelector(".request-joke-btn")
+const jokeTarget = document.querySelector(".joke-test")
 
 jokeBtn.addEventListener("click", () => {
   getJoke()
     .then(_ => {
-      joke = useJoke()
-      console.log(joke)
+      const joke = useJoke()
+      const jokeHTML = Joke(joke)
+      jokeTarget.innerHTML = jokeHTML
     })
   // TODO: fetch a joke from the Joke API and render it to the DOM
-});
+})
