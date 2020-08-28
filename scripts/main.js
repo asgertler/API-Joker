@@ -1,5 +1,5 @@
 import { getJoke, useJoke } from './JokeProvider.js'
-import { Joke, JokeSetup, JokePunchline } from './Joke.js'
+import { JokeSetup, JokePunchline } from './Joke.js'
 
 const jokeBtn = document.querySelector(".request-joke-btn")
 
@@ -9,7 +9,6 @@ const punchlineTarget = document.querySelector(".joke-punchline")
 
 let setupHTML = []
 let punchHTML = []
-
 
 jokeBtn.addEventListener("click", () => {
   getJoke()
