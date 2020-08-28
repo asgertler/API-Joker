@@ -1,24 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="styles/main.css" />
-    <title>API Joker</title>
-  </head>
-  <body>
-    <header>
-      <h1>API Joker</h1>
-    </header>
-    <section>
-      <button class="request-joke-btn">Tell me a joke!</button>
-      <p class="joke-setup">
-        <!-- Joke Setup Goes Here -->
-      </p>
-      <p class="joke-punchline">
-        <!-- Punchline Goes Here -->
-      </p>
-    </section>
-  </body>
-  <script src="scripts/main.js" type="module"></script>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="styles/main.css" />
+  <title>API Joker</title>
+</head>
+
+<body>
+  <header>
+    <h1>API Joker</h1>
+  </header>
+  <div class="joke-type-menu">
+    <form action="#" method="post" id="jokeForm" class="jokeForm">
+      <select id="jokeType" name="jokeType">
+        <option value="noChoice">Choose a Joke Genre</option>
+        <option value="general">General</option>
+        <option value="knockKnock">Knock-Knock</option>
+        <option value="programming">Programming</option>
+        <option value="random">Random</option>
+      </select>
+    </form>
+  </div>
+  <section>
+    <button class="request-joke-btn">Tell me a joke!</button>
+    <!-- <section class="joke-test"></section>> -->
+    <p class="joke-setup">
+      <!-- Joke Setup Goes Here -->
+    </p>
+    <div class="punchline-btinsert"></div>
+    <p class="joke-punchline">
+      <!-- Punchline Goes Here -->
+    </p>
+  </section>
+</body>
+<script src="scripts/main.js" type="module"></script>
+
 </html>
