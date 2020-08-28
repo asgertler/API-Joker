@@ -7,3 +7,15 @@ export const Joke = (joke) => {
         <div class="joke-punchline">${joke.punchline}</div>
     `
 }
+
+export const JokeSetup = (joke) => {
+    return `
+        ${joke.setup}
+    `
+}
+
+export const JokePunchline = (joke) => {
+    return `
+        ${joke.punchline}
+    `
+}
